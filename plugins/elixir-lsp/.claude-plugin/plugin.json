@@ -1,0 +1,13 @@
+{
+  "name": "elixir-lsp",
+  "version": "1.0.0",
+  "description": "Elixir LSP support using Expert - the official Elixir Language Server",
+  "author": {
+    "name": "Tuấn",
+    "url": "https://github.com/lATAl"
+  },
+  "repository": "https://github.com/elixir-lang/expert",
+  "license": "Apache-2.0",
+  "keywords": ["elixir", "lsp", "expert", "language-server"],
+  "lspServers": "./.lsp.json"
+}

@@ -1,0 +1,15 @@
+{
+  "elixir": {
+    "command": "expert",
+    "args": ["--stdio"],
+    "extensionToLanguage": {
+      ".ex": "elixir",
+      ".exs": "elixir",
+      ".heex": "heex",
+      ".eex": "eex",
+      ".leex": "eex"
+    },
+    "restartOnCrash": true,
+    "maxRestarts": 3
+  }
+}

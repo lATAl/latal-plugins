@@ -1,0 +1,19 @@
+{
+  "name": "latal-plugins",
+  "owner": {
+    "name": "Tuấn",
+    "url": "https://github.com/lATAl"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by lATAl"
+  },
+  "plugins": [
+    {
+      "name": "elixir-lsp",
+      "source": "./plugins/elixir-lsp",
+      "description": "Elixir LSP support using Expert - the official Elixir Language Server",
+      "version": "1.0.0",
+      "keywords": ["elixir", "lsp", "expert", "language-server"]
+    }
+  ]
+}
