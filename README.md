@@ -19,11 +19,14 @@ Elixir LSP support using [Expert](https://github.com/elixir-lang/expert) - the o
 ### 1. Install Expert binary
 
 ```bash
-# Download latest release
-gh release download --pattern 'expert_*' --repo elixir-lang/expert
+# macOS ARM64 (Apple Silicon)
+gh release download nightly --pattern 'expert_darwin_arm64' --repo elixir-lang/expert --clobber
 
-# Or nightly build
-gh release download nightly --pattern 'expert_*' --repo elixir-lang/expert
+# macOS Intel
+gh release download nightly --pattern 'expert_darwin_amd64' --repo elixir-lang/expert --clobber
+
+# Linux x64
+gh release download nightly --pattern 'expert_linux_amd64' --repo elixir-lang/expert --clobber
 
 # Make executable and move to PATH
 chmod +x expert_*
