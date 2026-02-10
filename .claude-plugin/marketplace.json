@@ -12,8 +12,22 @@
       "name": "elixir-lsp",
       "source": "./plugins/elixir-lsp",
       "description": "Elixir LSP support using Expert - the official Elixir Language Server",
-      "version": "1.0.0",
-      "keywords": ["elixir", "lsp", "expert", "language-server"]
+      "version": "1.0.1",
+      "keywords": ["elixir", "lsp", "expert", "language-server"],
+      "strict": false,
+      "lspServers": {
+        "elixir": {
+          "command": "expert",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".ex": "elixir",
+            ".exs": "elixir",
+            ".heex": "heex",
+            ".eex": "eex",
+            ".leex": "eex"
+          }
+        }
+      }
     }
   ]
 }
