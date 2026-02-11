@@ -1,13 +1,28 @@
 {
   "name": "elixir-lsp",
-  "version": "1.0.0",
-  "description": "Elixir LSP support using Expert - the official Elixir Language Server",
+  "version": "1.0.1",
+  "description": "Elixir Language Server integration for Claude Code",
   "author": {
-    "name": "Tuấn",
+    "name": "Tuan",
     "url": "https://github.com/lATAl"
   },
+  "homepage": "https://github.com/lATAl/latal-plugins",
   "repository": "https://github.com/elixir-lang/expert",
   "license": "Apache-2.0",
-  "keywords": ["elixir", "lsp", "expert", "language-server"],
-  "lspServers": "./.lsp.json"
+  "keywords": ["elixir", "lsp", "expert", "language-server", "phoenix", "heex"],
+  "lspServers": {
+    "elixir": {
+      "command": "expert",
+      "args": ["--stdio"],
+      "extensionToLanguage": {
+        ".ex": "elixir",
+        ".exs": "elixir",
+        ".heex": "heex",
+        ".eex": "eex",
+        ".leex": "leex"
+      },
+      "restartOnCrash": true,
+      "maxRestarts": 3
+    }
+  }
 }

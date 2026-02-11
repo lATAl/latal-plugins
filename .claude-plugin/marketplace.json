@@ -11,23 +11,10 @@
     {
       "name": "elixir-lsp",
       "source": "./plugins/elixir-lsp",
-      "description": "Elixir LSP support using Expert - the official Elixir Language Server",
+      "description": "Elixir Language Server integration for Claude Code",
       "version": "1.0.1",
-      "keywords": ["elixir", "lsp", "expert", "language-server"],
-      "strict": false,
-      "lspServers": {
-        "elixir": {
-          "command": "expert",
-          "args": ["--stdio"],
-          "extensionToLanguage": {
-            ".ex": "elixir",
-            ".exs": "elixir",
-            ".heex": "heex",
-            ".eex": "eex",
-            ".leex": "eex"
-          }
-        }
-      }
+      "keywords": ["elixir", "lsp", "expert", "language-server", "phoenix", "heex"],
+      "strict": false
     }
   ]
 }
