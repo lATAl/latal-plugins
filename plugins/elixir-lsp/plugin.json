@@ -21,6 +21,11 @@
         ".eex": "eex",
         ".leex": "leex"
       },
+      "initializationOptions": {
+        "dialyzerEnabled": true,
+        "fetchDeps": false,
+        "suggestSpecs": true
+      },
       "restartOnCrash": true,
       "maxRestarts": 3
     }
