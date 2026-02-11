@@ -14,7 +14,25 @@
       "description": "Elixir Language Server integration for Claude Code",
       "version": "1.0.1",
       "keywords": ["elixir", "lsp", "expert", "language-server", "phoenix", "heex"],
-      "strict": false
+      "strict": false,
+      "lspServers": {
+        "elixir": {
+          "command": "expert",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".ex": "elixir",
+            ".exs": "elixir",
+            ".heex": "heex",
+            ".eex": "eex",
+            ".leex": "leex"
+          },
+          "initializationOptions": {
+            "dialyzerEnabled": true,
+            "fetchDeps": false,
+            "suggestSpecs": true
+          }
+        }
+      }
     }
   ]
 }
