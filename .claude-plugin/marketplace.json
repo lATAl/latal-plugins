@@ -9,6 +9,13 @@
   },
   "plugins": [
     {
+      "name": "pancake",
+      "source": "./plugins/pancake",
+      "description": "PR review automation skills: iterative review loop and PR check analysis.",
+      "version": "1.0.0",
+      "keywords": ["pr", "review", "github", "automation"]
+    },
+    {
       "name": "elixir-lsp",
       "source": "./plugins/elixir-lsp",
       "description": "Elixir Language Server integration for Claude Code",
