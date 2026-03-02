@@ -2,24 +2,39 @@
 
 Claude Code plugins by [lATAl](https://github.com/lATAl).
 
+## Quick Start
+
+```bash
+# 1. Add marketplace
+/plugin marketplace add lATAl/latal-plugins
+
+# 2. Install plugin(s)
+/plugin install elixir-lsp@latal-plugins
+/plugin install pancake@latal-plugins
+```
+
+---
+
 ## Plugins
 
 ### elixir-lsp
 
-Elixir LSP support using [Expert](https://github.com/elixir-lang/expert) - the official Elixir Language Server.
+Elixir LSP support via [Expert](https://github.com/elixir-lang/expert) — the official Elixir Language Server.
+
+**Skills:** none (LSP only)
 
 **Features:**
-- Instant diagnostics (errors/warnings after each edit)
+- Instant diagnostics after each edit
 - Go to definition, find references
-- Hover information with type docs
-- Support for `.ex`, `.exs`, `.heex`, `.eex`, `.leex`
+- Hover with type docs
+- Supports `.ex`, `.exs`, `.heex`, `.eex`, `.leex`
 
-## Installation
+**Requirements:** Expert binary in `$PATH`, Elixir >= 1.15.3, Erlang >= 25.0
 
-### 1. Install Expert binary
+**Install Expert:**
 
 ```bash
-# macOS ARM64 (Apple Silicon)
+# macOS ARM64
 gh release download nightly --pattern 'expert_darwin_arm64' --repo elixir-lang/expert --clobber
 
 # macOS Intel
@@ -28,30 +43,22 @@ gh release download nightly --pattern 'expert_darwin_amd64' --repo elixir-lang/e
 # Linux x64
 gh release download nightly --pattern 'expert_linux_amd64' --repo elixir-lang/expert --clobber
 
-# Make executable and move to PATH
-chmod +x expert_*
-mv expert_* ~/.local/bin/expert
+chmod +x expert_* && mv expert_* ~/.local/bin/expert
 ```
 
-Verify: `expert --version`
+---
 
-### 2. Add marketplace
+### pancake
 
-```
-/plugin marketplace add lATAl/latal-plugins
-```
+PR review automation skills for GitHub workflows.
 
-### 3. Install plugin
+**Skills:**
+- `/pancake:check-pr` — Analyze a PR's review comments, unresolved threads, and CI status
+- `/pancake:review-loop` — Iterative review loop: push → trigger `/review` bot → fix → repeat until approved
 
-```
-/plugin install elixir-lsp@latal-plugins
-```
+**Requirements:** `gh` CLI authenticated, GitHub Actions bot configured for `/review` command
 
-## Requirements
-
-- Claude Code
-- Expert binary in `$PATH`
-- Elixir >= 1.15.3, Erlang >= 25.0
+---
 
 ## License
 
