@@ -1,0 +1,9 @@
+{
+  "name": "pancake",
+  "description": "PR review automation skills: iterative review loop and PR check analysis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "tuan"
+  },
+  "license": "MIT"
+}
